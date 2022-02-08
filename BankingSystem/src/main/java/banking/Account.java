@@ -18,11 +18,14 @@ public abstract class Account {
 
 	protected Account(AccountHolder accountHolder, Long accountNumber, int pin, double startingDeposit) {
 		// complete the constructor
+		this.accountHolder = accountHolder;
+		this.accountNumber = accountNumber;
+		this.startingDeposit = startingDeposit;
 	}
 
 	public AccountHolder getAccountHolder() {
 		// complete the function
-        return null;
+        return accountHolder;
 	}
 
 	public boolean validatePin(int attemptedPin) {
@@ -37,7 +40,7 @@ public abstract class Account {
 
 	public Long getAccountNumber() {
 		// complete the function
-        return -1L;
+        return accountNumber;
 	}
 
 	public void creditAccount(double amount) {
